@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { FormControl,FormControlName,FormGroup } from "@angular/forms";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +9,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'formy';
+
+  loginForm= new FormGroup({
+    // user: new FormControl(''),
+    user: new FormControl('qq'),
+    password: new FormControl('qq')
+  })
+  loginFormOut() {
+    console.log(this.loginForm.value)
+  }
+
+  
 }
